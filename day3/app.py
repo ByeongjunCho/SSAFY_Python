@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 import random
+from bs4 import BeautifulSoup
+import requests
 app = Flask(__name__)  # 객체 생성
 
 @app.route("/")
