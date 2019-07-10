@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>첫번째 HTML</title>
+        <style>
+            h1 {
+                color : red;
+                text-align: center;
+            }        
+            p {
+                color : blue;
+                text-align: right;
+            }
+            /* 태그 선택자 */
+            h2 {
+                color: black;
+            }
+            /* 클래스 선택자 */
+            .red{
+                color : red;
+            }
+            /* 아이디 선택자 */
+            #pink{
+                color: pink;
+            }
+            /* 우선순위
+            id > class > 태그
+            id는 문서에서 하나만 존재할 수 있다.
+            class는 문서에서 여러개 존재할 수 있다.
+            태그는 그냥 기본이다.
+             */
+        </style>
+    </head>
+    <body>
+        <h1>Happy, hacking!</h1>
+        <h1>hdsaiafsdlk;</h1>
+        <h2 id="pink" class="red">안녕하세요.</h2>
+        <h6> 가장 작은 제목(heading)입니다.</h6>
+        <p style="font-size:20pt;color:blue">스타일이 지정된 문단이다.</p>
+        <p>내용내용. <br> 문단의 내용을 작성합니다.</div></p>
+        <p class="red">나는 빨간색이고 싶어요.</p>
+        <!-- a 태그는 href 속성으로 해당하는 링크를 설정한다. -->
+        <a href="https://google.com"> 구글로 가즈아!</a>
+        <br>  
+        <!-- img 태그는 닫는 태그가 없다.
+            src 속성값은 이미지의 경로이다. 
+        -->
+        <img title="람쥐썬더" width="500" height="500" src="data:image/jpeg;base64,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">
+        <br>
+        <!-- 동영상 입력 -->
+        <iframe width="300" height="100" src="https://www.youtube.com/embed/A7KxKh1IBeg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+    </body>
+</html>
