@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>원하는 것들을 채워보세요</h1>
+    <form action="/random/result">
+        <input type="text" name="tp1">
+        <input type="text" name="tp2">
+        <input type="text" name="tp3">
+        <input type="submit" name="제출하기" >      
+
+    </form>
+    <form action="/result">
+        <select name="mood" >
+                <option value="외로움">외로움</option>
+                <option value="배고픔">배고픔</option>
+                <option value="슬픔">슬픔</option>
+            </select>
+            <input type="radio" name="weather" >
+            <input type="radio" name="weather">
+            <input type="submit" value="노래추천받기">
+    </form>
+    <br>
+    <h1>뭐해볼까요</h1>
+    <form action="/random">
+        <input type="text" name="address">
+        <input type="submit" name="google" value="go google">
+    </form>
+    <img src="/static/{{img}}" alt="">
+    <br>
+    <h2>컬러를 계속 변경할 수 있을까?</h2>
+    {% for i in range(10) %}
+        {% if i%2==0 %}
+            <h1 class={{colors[0]}}>호우</h1>
+        {% else %}
+            <h1 class={{colors[1]}}>호우우</h1>
+        {% endif %}
+    {% endfor %}
+    
+    
+</body>
+</html>

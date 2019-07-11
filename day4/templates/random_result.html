@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <h1> {{tp1}} </h1>
+        <h1> {{tp2}} </h1>
+        <h1> {{tp3}} </h1>
+    </ol>
+    <h1>{{result}}가 나왔어요</h1>
+    
+    {% if tp1 == "asdf" %}
+        <h1>{{tp1}}</h1>
+    {% elif tp2 == "asdf" %}
+        <h2 style="color: blue"> {{tp2}}</h2>
+    {% endif %}
+    
+    <form action="/random">
+        <input type="submit" name="돌아가기" value="선택으로 돌아가기">
+    </form>
+</body>
+</html>
