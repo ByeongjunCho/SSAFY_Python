@@ -64,5 +64,19 @@ def result():
     }
     music = random.choice(playlist)
     return render_template('result.html', mood=mood, weather=weather, music = music)
+
+@app.route('/lotto')
+def lotto():
+    
+    return render_template('lotto.html')
+
+@app.route('/lotto_result')
+def lotto_result():
+    name = request.args.get('name')
+    num = request.args.get('num')
+    random.seed(num)
+    numbers = random.sample(range(1,46), 6)
+
+    return render_template('lotto_result.html', namee=name, numberss=numbers)
 if __name__ == "__main__":
     app.run(debug=True)
